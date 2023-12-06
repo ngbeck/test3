@@ -3,4 +3,5 @@ numpy
 pandas
 pydeck
 streamlit
-gspread
+pandasql
+st-gsheets-connection
