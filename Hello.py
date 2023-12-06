@@ -15,7 +15,7 @@
 import streamlit as st
 from streamlit.logger import get_logger
 
-from streamlit_gsheets import GSheetsConnection
+from streamlit.gsheets import GSheetsConnection
 
 # Create GSheets connection
 conn = st.experimental_connection("gsheets", type=GSheetsConnection)
