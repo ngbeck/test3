@@ -15,30 +15,6 @@
 import streamlit as st
 from streamlit.logger import get_logger
 
-from streamlit.gsheets import GSheetsConnection
-
-# Create GSheets connection
-conn = st.experimental_connection("gsheets", type=GSheetsConnection)
-
-st.write(conn)
-st.help(conn)
-
-#Demo Loilty DataFrame
-df = loilty.csv
-
-#click button to update worksheet
-#this is behind a button to avoid exceeding Google API Quota
-if st.button("Create new worksheet"):
-    df = conn.create(
-        worksheet="Example 1",
-        data=df,
-    )
-st.cache_data.clear()
-st.experimental_rerun()
-
-#Display our spreadsheet as st.dataframe
-st.dataframe(df.head(10))
-
 LOGGER = get_logger(__name__)
 
 
