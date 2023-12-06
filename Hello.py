@@ -31,7 +31,7 @@ df = loilty.csv
 if st.button("Create new worksheet"):
     df = conn.create(
         worksheet="Example 1",
-        data-df,
+        data=df,
     )
 st.cache_data.clear()
 st.experimental_rerun()
